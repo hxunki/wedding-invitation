@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { weddingConfig } from '../../config/wedding-config';
 import { AccountInfo } from '../../types/wedding';
+import KakaoShareButton from "./KakaoShareButton";
 
 type AccountPerson = 'groom' | 'bride' | 'groomFather' | 'groomMother' | 'brideFather' | 'brideMother';
 type AccountSide = 'groom' | 'bride';
@@ -193,6 +194,9 @@ const AccountSection = ({ bgColor = 'white' }: AccountSectionProps) => {
         <ShareButton onClick={shareWebsite} $isShare={true}>
           공유하기
         </ShareButton>
+        <KakaoShareButton>
+          카카오톡 공유하기
+        </KakaoShareButton>
       </ShareContainer>
     </AccountSectionContainer>
   );
@@ -418,7 +422,7 @@ const ShareContainer = styled.div`
   gap: 1rem;
 `;
 
-const ShareButton = styled.button<{ $isShare?: boolean }>`
+export const ShareButton = styled.button<{ $isShare?: boolean }>`
   background-color: var(--secondary-color);
   color: white;
   border: none;

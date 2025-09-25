@@ -13,9 +13,9 @@ interface GalleryConfig {
 export const weddingConfig = {
   // 메타 정보
   meta: {
-    title: "신부 ❤️ 박현민의 결혼식에 초대합니다",
+    title: "hxunki의 결혼식에 초대합니다",
     description: "결혼식 초대장",
-    ogImage: "/images/ha0h-1fsi-bqt3.jpg",
+    ogImage: "/images/main.jpeg",
     noIndex: true,
     _jwk_watermark_id: uniqueIdentifier,
   },
@@ -23,7 +23,7 @@ export const weddingConfig = {
   // 메인 화면
   main: {
     title: "Love Wedding",
-    image: "/images/ha0h-1fsi-bqt3.jpg",
+    image: "/images/main.jpeg",
     date: "2026년 5월 16일 토요일 12시 30분",
     venue: "HM Wedding"
   },
@@ -87,15 +87,15 @@ export const weddingConfig = {
     layout: "grid" as GalleryLayout, // "scroll" 또는 "grid" 선택
     position: "bottom" as GalleryPosition, // "middle" (현재 위치) 또는 "bottom" (맨 하단) 선택
     images: [
-      "/images/gallery/image1.jpg",
-      "/images/gallery/image2.jpg",
-      "/images/gallery/image3.jpg",
-      "/images/gallery/image4.jpg",
-      "/images/gallery/image5.jpg",
-      "/images/gallery/image6.jpg",
-      "/images/gallery/image7.jpg",
-      "/images/gallery/image8.jpg",
-      "/images/gallery/image9.jpg",
+      "/images/gallery/image1.jpeg",
+      "/images/gallery/image2.jpeg",
+      "/images/gallery/image3.jpeg",
+      "/images/gallery/image4.jpeg",
+      "/images/gallery/image5.jpeg",
+      "/images/gallery/image6.jpeg",
+      "/images/gallery/image7.jpeg",
+      "/images/gallery/image8.jpeg",
+      "/images/gallery/image9.jpeg",
     ],
   } as GalleryConfig,
 

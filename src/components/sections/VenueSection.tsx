@@ -173,6 +173,7 @@ const VenueSection = ({ bgColor = 'white' }: VenueSectionProps) => {
     if (typeof window !== 'undefined') {
       // 네이버 지도 앱/웹으로 연결하는 URL (새로운 형식)
       const naverMapsUrl = `https://map.naver.com/p/directions/-/-/-/walk/place/${weddingConfig.venue.placeId}?c=${weddingConfig.venue.mapZoom},0,0,0,dh`;
+      console.log(naverMapsUrl);
       window.open(naverMapsUrl, '_blank');
     }
   };
@@ -185,10 +186,22 @@ const VenueSection = ({ bgColor = 'white' }: VenueSectionProps) => {
       const name = encodeURIComponent(weddingConfig.venue.name);
       const address = encodeURIComponent(weddingConfig.venue.address);
       const kakaoMapsUrl = `https://map.kakao.com/link/to/${name},${lat},${lng}`;
+      console.log(kakaoMapsUrl);
       window.open(kakaoMapsUrl, '_blank');
     }
   };
   
+  const navigateToGoogle = () => {
+    if (typeof window !== 'undefined') {
+      const lat = weddingConfig.venue.coordinates.latitude;
+      const lng = weddingConfig.venue.coordinates.longitude;
+
+      const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+      console.log(googleMapsUrl);
+      window.open(googleMapsUrl, '_blank');
+    }
+  };
+
   const navigateToTmap = () => {
     if (typeof window !== 'undefined') {
       // TMAP 앱으로 연결 (앱 딥링크만 사용)
@@ -208,6 +221,8 @@ const VenueSection = ({ bgColor = 'white' }: VenueSectionProps) => {
     }
   };
   
+
+
   return (
     <VenueSectionContainer $bgColor={bgColor}>
       <SectionTitle>장소</SectionTitle>
@@ -227,7 +242,7 @@ const VenueSection = ({ bgColor = 'white' }: VenueSectionProps) => {
       )}
       
       <NavigateButtonsContainer>
-        <NavigateButton onClick={navigateToNaver} $mapType="naver">
+        {/* <NavigateButton onClick={navigateToNaver} $mapType="naver">
           네이버 지도
         </NavigateButton>
         <NavigateButton onClick={navigateToKakao} $mapType="kakao">
@@ -235,7 +250,27 @@ const VenueSection = ({ bgColor = 'white' }: VenueSectionProps) => {
         </NavigateButton>
         <NavigateButton onClick={navigateToTmap} $mapType="tmap">
           TMAP
-        </NavigateButton>
+        </NavigateButton> */}
+        <MapButton
+          onClick={navigateToNaver}
+          imgSrc="images/map/naver-map.png"
+          alt="네이버 지도"
+        />
+        <MapButton
+          onClick={navigateToKakao}
+          imgSrc="images/map/kakao-map.png"
+          alt="카카오맵"
+        />
+        <MapButton
+          onClick={navigateToGoogle}
+          imgSrc="images/map/google-map.png"
+          alt="구글 지도"
+        />
+        <MapButton
+          onClick={navigateToTmap}
+          imgSrc="images/map/tmap-map.png"
+          alt="티맵"
+        />
       </NavigateButtonsContainer>
       
       <TransportCard>
@@ -606,5 +641,32 @@ const ExpandIcon = styled.span<{ $isExpanded: boolean }>`
 const ShuttleContent = styled.div`
   padding: 1rem 1.5rem 1.5rem;
 `;
+
+type MapButtonProps = {
+  onClick: () => void;
+  imgSrc: string;
+  alt: string;
+};
+
+const StyledMapButton = styled.a`
+  display: inline-block;
+  cursor: pointer; /* 👈 포인터 커서 지정 */
+  
+  img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.1); /* 👈 호버 시 확대 효과 */
+  }
+`;
+
+const MapButton = ({ onClick, imgSrc, alt }: MapButtonProps) => (
+  <StyledMapButton onClick={onClick} target="_blank">
+    <img width="48" src={imgSrc} alt={alt} />
+  </StyledMapButton>
+);
 
 export default VenueSection; 

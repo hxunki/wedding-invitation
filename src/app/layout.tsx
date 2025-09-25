@@ -31,18 +31,17 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         {}
-        <meta name="generator" content={`Wedding-Template-${watermarkId}`} />
         <meta name="description" content={metaDescription} />
       </head>
       <body>
         <GlobalStyle />
         <CacheManager />
         {}
-        <div className="jwk-watermark" aria-hidden="true">
+        {/* <div className="jwk-watermark" aria-hidden="true">
           JWK-Wedding-{watermarkId}-NonCommercial
-        </div>
-        <Watermark />
-        {children}
+        </div> */}
+        {/* <Watermark /> */}
+        {/* {children} */}
       </body>
     </html>
   );

@@ -13,7 +13,7 @@ interface GalleryConfig {
 export const weddingConfig = {
   // 메타 정보
   meta: {
-    title: "신랑 ❤️ 신부의 결혼식에 초대합니다",
+    title: "신부 ❤️ 박현민의 결혼식에 초대합니다",
     description: "결혼식 초대장",
     ogImage: "/images/ha0h-1fsi-bqt3.jpg",
     noIndex: true,
@@ -22,10 +22,10 @@ export const weddingConfig = {
 
   // 메인 화면
   main: {
-    title: "Wedding Invitation",
+    title: "Love Wedding",
     image: "/images/ha0h-1fsi-bqt3.jpg",
     date: "2026년 5월 16일 토요일 12시 30분",
-    venue: "웨딩홀 이름"
+    venue: "HM Wedding"
   },
 
   // 소개글
@@ -36,12 +36,12 @@ export const weddingConfig = {
 
   // 결혼식 일정
   date: {
-    year: 2026,
-    month: 5,
-    day: 16,
+    year: 2030,
+    month: 3,
+    day: 31,
     hour: 12,
     minute: 30,
-    displayDate: "2026.05.16 SAT PM 12:30",
+    displayDate: "2030.03.31 SUN PM 02:30",
   },
 
   // 장소 정보
@@ -61,23 +61,23 @@ export const weddingConfig = {
       subway: "지하철역 1번 출구에서 도보 5분",
       bus: "간선\n 101, 102, 103\n지선\n 1234, 5678",
     },
-    parking: "건물 지하 주차장 이용 가능 (2시간 무료)",
+    parking: "건물 지하 주차장 이용 가능 (2시간 무료)\n외부 주차장: 외부 주차장명",
     // 신랑측 배차 안내
     groomShuttle: {
-      location: "신랑측 배차 출발지",
-      departureTime: "오전 10시 30분 출발",
+      location: "",
+      departureTime: "",
       contact: {
-        name: "담당자명",
-        tel: "010-1234-5678"
+        name: "",
+        tel: ""
       }
     },
     // 신부측 배차 안내
     brideShuttle: {
-      location: "신부측 배차 출발지",
-      departureTime: "오전 11시 출발",
+      location: "",
+      departureTime: "",
       contact: {
-        name: "담당자명",
-        tel: "010-9876-5432"
+        name: "",
+        tel: ""
       }
     }
   },
@@ -103,10 +103,10 @@ export const weddingConfig = {
   invitation: {
     message: "한 줄기 별빛이 되어 만난 인연\n평생을 함께 걸어가려 합니다.\n\n소중한 분들의 축복 속에\n저희 두 사람이 첫 걸음을 내딛습니다.\n\n귀한 시간 내어 함께해 주신다면\n그 어떤 축복보다 값진 선물이 될 것입니다.",
     groom: {
-      name: "신랑이름",
+      name: "박xx",
       label: "아들",
-      father: "신랑아버지",
-      mother: "신랑어머니",
+      father: "박xx",
+      mother: "이xx",
     },
     bride: {
       name: "신부이름",

@@ -10,6 +10,36 @@ interface GalleryConfig {
   images: string[];
 }
 
+interface ShuttleInfo {
+  location: string;
+  departureTime: string;
+  contact: {
+    name: string;
+    tel: string;
+  };
+}
+
+interface VenueConfig {
+  name: string;
+  address: string;
+  tel: string;
+  naverMapId: string;
+  coordinates: {
+    latitude: number;
+    longitude: number;
+  };
+  placeId: string;
+  mapZoom: string;
+  mapNaverCoordinates: string;
+  transportation: {
+    subway: string;
+    bus: string;
+  };
+  parking: string;
+  groomShuttle?: ShuttleInfo; // 추가
+  brideShuttle?: ShuttleInfo; // 추가
+}
+
 export const weddingConfig = {
   // 메타 정보
   meta: {
@@ -80,7 +110,7 @@ export const weddingConfig = {
     //     tel: ""
     //   }
     // }
-  },
+  } as VenueConfig,
 
   // 갤러리
   gallery: {

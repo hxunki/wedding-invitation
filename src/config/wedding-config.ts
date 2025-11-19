@@ -24,7 +24,7 @@ export const weddingConfig = {
   main: {
     title: "Love Wedding",
     image: "/images/main.jpeg",
-    date: "2026년 5월 16일 토요일 12시 30분",
+    date: "2030년 3월 31일 일요일 14시 30분",
     venue: "HM Wedding"
   },
 
@@ -46,15 +46,15 @@ export const weddingConfig = {
 
   // 장소 정보
   venue: {
-    name: "웨딩홀 이름",
-    address: "서울특별시 강남구 테헤란로 123\n웨딩홀 이름",
+    name: "다산한양수자인리버팰리스",
+    address: "경기도 남양주시 다산순환로171\n다산한양수자인리버팰리스",
     tel: "02-1234-5678",
-    naverMapId: "웨딩홀 이름", // 네이버 지도 검색용 장소명
+    naverMapId: "다산한양수자인", // 네이버 지도 검색용 장소명
     coordinates: {
-      latitude: 37.5665,
-      longitude: 126.9780,
+      latitude: 37.62542225513306,
+      longitude: 127.14569987947893,
     },
-    placeId: "123456789", // 네이버 지도 장소 ID
+    placeId: "37411916", // 네이버 지도 장소 ID
     mapZoom: "17", // 지도 줌 레벨
     mapNaverCoordinates: "14141300,4507203,15,0,0,0,dh", // 네이버 지도 길찾기 URL용 좌표 파라미터 (구 형식)
     transportation: {
@@ -63,29 +63,29 @@ export const weddingConfig = {
     },
     parking: "건물 지하 주차장 이용 가능 (2시간 무료)\n외부 주차장: 외부 주차장명",
     // 신랑측 배차 안내
-    groomShuttle: {
-      location: "",
-      departureTime: "",
-      contact: {
-        name: "",
-        tel: ""
-      }
-    },
-    // 신부측 배차 안내
-    brideShuttle: {
-      location: "",
-      departureTime: "",
-      contact: {
-        name: "",
-        tel: ""
-      }
-    }
+    // groomShuttle: {
+    //   location: "",
+    //   departureTime: "",
+    //   contact: {
+    //     name: "",
+    //     tel: ""
+    //   }
+    // },
+    // // 신부측 배차 안내
+    // brideShuttle: {
+    //   location: "",
+    //   departureTime: "",
+    //   contact: {
+    //     name: "",
+    //     tel: ""
+    //   }
+    // }
   },
 
   // 갤러리
   gallery: {
-    layout: "grid" as GalleryLayout, // "scroll" 또는 "grid" 선택
-    position: "bottom" as GalleryPosition, // "middle" (현재 위치) 또는 "bottom" (맨 하단) 선택
+    layout: "scroll" as GalleryLayout, // "scroll" 또는 "grid" 선택
+    position: "middle" as GalleryPosition, // "middle" (현재 위치) 또는 "bottom" (맨 하단) 선택
     images: [
       "/images/gallery/image2.jpeg",
       "/images/gallery/image3.jpeg",
